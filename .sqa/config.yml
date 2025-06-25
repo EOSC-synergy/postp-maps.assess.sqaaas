@@ -1,0 +1,64 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/postp-maps:
+      branch: main
+      repo: https://gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/postp-maps
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/postp-maps git:
+        commands:
+        - /usr/bin/env sh .sqa/script.woozy-cornflower-sparrow.sh
+        container: qc.acc_chummy-green-yak
+  QC.Doc:
+    repos:
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/postp-maps find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.flaky-plum-indri.sh
+        container: qc.doc_skimpy-charcoal-tang
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/postp-maps git:
+        commands:
+        - /usr/bin/env sh .sqa/script.tacky-aquamarine-monster.sh
+        container: qc.doc_beady-amaranth-flamingo
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/postp-maps markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.skanky-alizarin-collie.sh
+        container: qc.doc_gimpy-lime-woodpecker
+  QC.Lic:
+    repos:
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/postp-maps licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.nerdy-zucchini-frog.sh
+        container: qc.lic_leaky-peach-budgerigar
+  QC.Sec:
+    repos:
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/postp-maps bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.flabby-magnolia-newfoundland.sh
+        container: qc.sec_chummy-turquoise-maltese
+  QC.Sty:
+    repos:
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/postp-maps flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.hasty-sangria-russel.sh
+        container: qc.sty_bluesy-eggplant-fousek
+  QC.Uni:
+    repos:
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/postp-maps pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.lumpy-copper-lynx.sh
+        container: qc.uni_smelly-periwinkle-bandicoot
+  QC.Ver:
+    repos:
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/postp-maps get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.messy-cinnabar-mongrel.sh
+        container: qc.ver_silly-russet-bandicoot
+timeout: 5400
