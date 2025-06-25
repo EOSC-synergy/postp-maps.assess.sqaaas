@@ -15,50 +15,50 @@ sqa_criteria:
     repos:
       gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/postp-maps git:
         commands:
-        - /usr/bin/env sh .sqa/script.woozy-cornflower-sparrow.sh
-        container: qc.acc_chummy-green-yak
+        - /usr/bin/env sh .sqa/script.bluesy-purple-drever.sh
+        container: qc.acc_snazzy-olivine-tortoise
   QC.Doc:
     repos:
       gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/postp-maps find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.flaky-plum-indri.sh
-        container: qc.doc_skimpy-charcoal-tang
+        - /usr/bin/env sh .sqa/script.shaky-wisteria-quokka.sh
+        container: qc.doc_lovely-asparagus-deer
       gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/postp-maps git:
         commands:
-        - /usr/bin/env sh .sqa/script.tacky-aquamarine-monster.sh
-        container: qc.doc_beady-amaranth-flamingo
+        - /usr/bin/env sh .sqa/script.baggy-ochre-magpie.sh
+        container: qc.doc_wimpy-blue-dachshund
       gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/postp-maps markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.skanky-alizarin-collie.sh
-        container: qc.doc_gimpy-lime-woodpecker
+        - /usr/bin/env sh .sqa/script.trippy-jade-hedgehog.sh
+        container: qc.doc_nerdy-salmon-dunker
   QC.Lic:
     repos:
       gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/postp-maps licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.nerdy-zucchini-frog.sh
-        container: qc.lic_leaky-peach-budgerigar
+        - /usr/bin/env sh .sqa/script.zippy-lime-paradise.sh
+        container: qc.lic_grumpy-asparagus-insect
   QC.Sec:
     repos:
       gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/postp-maps bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.flabby-magnolia-newfoundland.sh
-        container: qc.sec_chummy-turquoise-maltese
+        - /usr/bin/env sh .sqa/script.baggy-green-pinscher.sh
+        container: qc.sec_snoopy-grey-warthog
   QC.Sty:
     repos:
       gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/postp-maps flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.hasty-sangria-russel.sh
-        container: qc.sty_bluesy-eggplant-fousek
+        - /usr/bin/env sh .sqa/script.shabby-azure-crab.sh
+        container: qc.sty_skinny-malachite-angelfish
   QC.Uni:
     repos:
       gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/postp-maps pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.lumpy-copper-lynx.sh
-        container: qc.uni_smelly-periwinkle-bandicoot
+        - /usr/bin/env sh .sqa/script.muggy-khaki-uguisu.sh
+        container: qc.uni_smelly-tomato-bracke
   QC.Ver:
     repos:
       gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/postp-maps get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.messy-cinnabar-mongrel.sh
-        container: qc.ver_silly-russet-bandicoot
+        - /usr/bin/env sh .sqa/script.nippy-blue-bison.sh
+        container: qc.ver_breezy-ochre-llama
 timeout: 5400
